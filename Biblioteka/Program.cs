@@ -76,7 +76,7 @@ namespace Biblioteka
                 }
                 catch (FormatException e)
                 {
-                    Console.WriteLine("Error passing data to PromoteEmployee method. " + e.Message);
+                    Console.WriteLine(e.Message);
                 }
             }
             Console.Write("Podaj ISBN: ");
@@ -127,7 +127,7 @@ namespace Biblioteka
                     }
                     catch (FormatException e)
                     {
-                        Console.WriteLine("Error passing data to PromoteEmployee method. " + e.Message);
+                        Console.WriteLine(e.Message);
                     }
                 }
 
