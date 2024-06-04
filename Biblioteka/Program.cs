@@ -66,10 +66,19 @@ namespace Biblioteka
 
             Console.Write("Podaj autora: ");
             newKsiazka.Autor = Console.ReadLine();
-
-            Console.Write("Podaj rok wydania: ");
-            newKsiazka.RokWydania = int.Parse(Console.ReadLine());
-
+            while (1==1)
+            {
+                Console.Write("Podaj rok wydania: ");
+                try
+                { 
+                    newKsiazka.RokWydania = int.Parse(Console.ReadLine());
+                    break;
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("Error passing data to PromoteEmployee method. " + e.Message);
+                }
+            }
             Console.Write("Podaj ISBN: ");
             newKsiazka.ISBN = Console.ReadLine();
 
@@ -108,8 +117,19 @@ namespace Biblioteka
                 Console.Write("Podaj nowego autora: ");
                 ksiazka.Autor = Console.ReadLine();
 
-                Console.Write("Podaj nowy rok wydania: ");
-                ksiazka.RokWydania = int.Parse(Console.ReadLine());
+                while (1 == 1)
+                {
+                    Console.Write("Podaj rok wydania: ");
+                    try
+                    {
+                        ksiazka.RokWydania = int.Parse(Console.ReadLine());
+                        break;
+                    }
+                    catch (FormatException e)
+                    {
+                        Console.WriteLine("Error passing data to PromoteEmployee method. " + e.Message);
+                    }
+                }
 
                 Console.Write("Podaj nowy ISBN: ");
                 ksiazka.ISBN = Console.ReadLine();
